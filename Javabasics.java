@@ -157,14 +157,9 @@ public class Javabasics {
             System.out.println("Else Statement: " + a);
         }
         switch (a) {
-            case 10:
-                System.out.println("Switch Case: " + a);
-                break;
-            case 20:
-                System.out.println("Switch Case: " + b);
-                break;
-            default:
-                System.out.println("Switch Case: " + a);
+            case 10 -> System.out.println("Switch Case: " + a);
+            case 20 -> System.out.println("Switch Case: " + b);
+            default -> System.out.println("Switch Case: " + a);
         }
     }
 
