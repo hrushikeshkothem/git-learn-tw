@@ -14,30 +14,30 @@ public class Methodoverriding {
         dog.sleep();
         dog.bark();
     }
-}
 
-class Animal {
-    public void eat() {
-        System.out.println("Animal is eating");
+    class Animal {
+        public void eat() {
+            System.out.println("Animal is eating");
+        }
+
+        public void sleep() {
+            System.out.println("Animal is sleeping");
+        }
     }
 
-    public void sleep() {
-        System.out.println("Animal is sleeping");
-    }
-}
+    class Dog extends Animal {
+        @Override
+        public void sleep() {
+            System.out.println("Dog is sleeping");
+        }
 
-class Dog extends Animal {
-    @Override
-    public void sleep() {
-        System.out.println("Dog is sleeping");
-    }
-    
-    @Override
-    public void eat() {
-        System.out.println("Dog is eating");
-    }
+        @Override
+        public void eat() {
+            System.out.println("Dog is eating");
+        }
 
-    public void bark() {
-        System.out.println("Dog is barking");
+        public void bark() {
+            System.out.println("Dog is barking");
+        }
     }
 }
